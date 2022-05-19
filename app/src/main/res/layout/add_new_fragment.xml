@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddNewFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="50dp">
+
+        <EditText
+            android:id="@+id/addNewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title"
+            android:inputType="textAutoComplete"
+            android:autofillHints=""/>
+
+        <EditText
+            android:id="@+id/addNewDeveloper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/developer"
+            android:inputType="textAutoComplete"
+            android:autofillHints=""/>
+
+        <EditText
+            android:id="@+id/addNewGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/genre"
+            android:inputType="textAutoComplete"
+            android:autofillHints=""/>
+
+        <EditText
+            android:id="@+id/addNewDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/publish_date"
+            android:inputType="date"
+            android:autofillHints=""/>
+
+        <EditText
+            android:id="@+id/addNewPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/price"
+            android:inputType="numberDecimal"
+            android:autofillHints=""/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_weight="10"
+                android:text="@string/favourite"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <CheckBox
+                android:id="@+id/addNewFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_weight="10"
+                android:text="@string/played"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <CheckBox
+                android:id="@+id/addNewPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="0"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addNewButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:layout_marginTop="25dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

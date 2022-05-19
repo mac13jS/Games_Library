@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.gameslibrary.view.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.gameslibrary.view.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.gameslibrary.view.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_addNewFragment"
+            app:destination="@id/addNewFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_libraryFragment"
+            app:destination="@id/libraryFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewFragment"
+        android:name="com.example.gameslibrary.view.AddNewFragment"
+        android:label="add_new_fragment"
+        tools:layout="@layout/add_new_fragment" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.gameslibrary.view.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_libraryFragment"
+            app:destination="@id/libraryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.example.gameslibrary.view.LibraryFragment"
+        android:label="library_fragment"
+        tools:layout="@layout/library_fragment" >
+        <action
+            android:id="@+id/action_libraryFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_libraryFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
